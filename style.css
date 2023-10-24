@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4b0082;
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #FF8000;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #4b0082;
+}
+
+label {
+    font-weight: bold;
+    color: #4b0082;
+}
+
+.question {
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+}
+
+input[type="submit"] {
+    background-color: #4b0082;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #FF8000;
+}
+
+/* Color naranja y color índigo para las opciones de radio */
+input[type="radio"] {
+    color: #FF8000; /* Color naranja */
+}
+
+/* Estilo para las opciones de radio seleccionadas */
+input[type="radio"]:checked {
+    color: #4b0082; /* Color índigo */
+}
+
+/* Estilo para las etiquetas de las preguntas */
+.question label {
+    color: #4b0082; /* Color índigo */
+}
+
+/* Estilo para el texto de las opciones de checkbox */
+input[type="checkbox"] {
+    color: #FF8000; /* Color naranja */
+}

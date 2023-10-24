@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encuesta de Empleados</title>
+    <meta name="tipo_contenido"  content="text/html;" http-equiv="content-type" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container">
+        <h1>Encuesta de Empleados</h1>
+        <form action="procesar_encuesta.php" method="POST">
+            <!-- Preguntas y respuestas aquí -->
+            <div class="question">
+                <label for="compromiso_lealtad">1. Ambiente:</label><br>
+                <br>
+                <b>a. ¿Cómo te sientes en tu ambiente de trabajo actualmente?</b><br>
+                <input type="radio" name="animosidad" value="Muy satisfecho">Muy satisfecho<br>
+                <input type="radio" name="animosidad" value="Satisfecho" checked>Satisfecho<br>
+                <input type="radio" name="animosidad" value="Neutral">Neutral<br>
+                <input type="radio" name="animosidad" value="Insatisfecho">Insatisfecho<br>
+                <input type="radio" name="animosidad" value="Muy insatisfecho">Muy insatisfecho<br>
+                <br>
+
+                <b>b. ¿Hay algo que te cause estrés o preocupación en tu trabajo?</b><br>
+                <input type="radio" name="estres_preocupacion" value="Sí">Sí<br>
+                <input type="radio" name="estres_preocupacion" value="No">No<br>
+                <br>
+
+                <b>c. ¿Te sientes valorado y reconocido por tus contribuciones en la organización?</b><br>
+                <input type="radio" name="valorado_reconocido" value="Sí" checked>Sí<br>
+                <input type="radio" name="valorado_reconocido" value="No">No<br>
+                <br>
+
+                <b>d. ¿Qué aspectos de tu trabajo te motivan o desmotivan?</b><br>
+                <textarea name="aspectos_motivacion"></textarea>
+            </div>
+
+            <div class="question">
+                <label for="compromiso">2. Compromiso:</label><br>
+                <br>
+                <b>a. ¿Cuánto te identificas con los valores y la misión de nuestra organización?</b><br>
+                <input type="radio" name="identificacion_valores" value="Mucho">Mucho<br>
+                <input type="radio" name="identificacion_valores" value="Bastante">Bastante<br>
+                <input type="radio" name="identificacion_valores" value="Algo">Algo<br>
+                <input type="radio" name="identificacion_valores" value="Poco">Poco<br>
+                <input type="radio" name="identificacion_valores" value="Nada">Nada<br>
+                <br>
+
+                <b>b. ¿Te sientes comprometido con tu trabajo y con la organización?</b><br>
+                <input type="radio" name="compromiso_organizacion" value="Sí">Sí<br>
+                <input type="radio" name="compromiso_organizacion" value="No">No<br>
+                <br>
+
+            <!--    <b>c. ¿Qué te hace sentir leal hacia nuestra organización?</b><br>
+                <textarea name="lealtad_organizacion"></textarea><br>
+                <br>
+
+                <b>d. ¿Qué sugerencias tienes para mejorar la relación entre los empleados y la empresa?</b><br>
+                <textarea name="sugerencias_mejora"></textarea>
+            </div>-->
+
+             <!-- Pregunta 3 -->
+            <div class="question">
+                <label for="rendimiento">3. Rendimiento:</label><br>
+                <br>
+                <b>a. ¿Sientes que estás alcanzando tus metas y objetivos laborales?</b><br>
+                <input type="radio" name="metas_objetivos" value="Sí">Sí<br>
+                <input type="radio" name="metas_objetivos" value="No">No<br>
+                <br>
+
+                <b>b. ¿Qué obstáculos o desafíos enfrentas en tu desempeño laboral?</b><br>
+                <textarea name="obstaculos_desafios"></textarea><br>
+                <br>
+
+                <b>c. ¿Recibes el apoyo necesario para tener un buen desempeño en tu trabajo?</b><br>
+                <input type="radio" name="apoyo_desempeno" value="Sí">Sí<br>
+                <input type="radio" name="apoyo_desempeno" value="No">No<br>
+                <br>
+
+                <b>d. ¿Cómo podríamos ayudarte a mejorar tu rendimiento laboral?</b><br>
+                <textarea name="ayuda_mejora"></textarea>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="question">
+                <label for="motivacion">4. Motivación:</label><br>
+                <br>
+                <b>a. ¿Qué te motiva a venir a trabajar todos los días?</b><br>
+                <input type="checkbox" name="motivacion" value="Desarrollo profesional">Desarrollo profesional<br>
+                <input type="checkbox" name="motivacion" value="Salario y beneficios">Salario y beneficios<br>
+                <input type="checkbox" name="motivacion" value="Reconocimiento">Reconocimiento<br>
+                <input type="checkbox" name="motivacion" value="Relaciones con compañeros">Relaciones con compañeros<br>
+                <input type="checkbox" name="motivacion" value="Otro">Otro (especificar): <input type="text" name="motivacion_otro"><br>
+                <br>
+
+                <b>b. ¿Tienes la oportunidad de utilizar tus habilidades y capacidades en tu trabajo?</b><br>
+                <input type="radio" name="oportunidad_habilidades" value="Sí">Sí<br>
+                <input type="radio" name="oportunidad_habilidades" value="No">No<br>
+                <br>
+
+                <b>c. ¿Qué cambios o mejoras en el entorno laboral te gustaría ver para sentirte más motivado?</b><br>
+                <textarea name="cambios_entorno_motivacion"></textarea><br>
+                <br>
+
+                <b>d. ¿Algún aspecto de tu trabajo actualmente te desmotiva?</b><br>
+                <textarea name="aspecto_desmotivacion"></textarea>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div class="question">
+                <label for="estado_emocional">5. Estado Emocional:</label><br>
+                <br>
+                <b>a. ¿Cómo te sientes emocionalmente en el trabajo?</b><br>
+                <input type="radio" name="emocion_trabajo" value="Feliz">Feliz<br>
+                <input type="radio" name="emocion_trabajo" value="Contento">Contento<br>
+                <input type="radio" name="emocion_trabajo" value="Neutral">Neutral<br>
+                <input type="radio" name="emocion_trabajo" value="Triste">Triste<br>
+                <input type="radio" name="emocion_trabajo" value="Estresado">Estresado<br>
+                <br>
+
+                <b>b. ¿Has experimentado situaciones de estrés o ansiedad en el trabajo recientemente?</b><br>
+                <input type="radio" name="estres_ansiedad" value="Sí">Sí<br>
+                <input type="radio" name="estres_ansiedad" value="No">No<br>
+                <br>
+
+                <b>c. ¿Sientes que tienes un equilibrio adecuado entre tu vida personal y laboral?</b><br>
+                <input type="radio" name="equilibrio_vida" value="Sí">Sí<br>
+                <input type="radio" name="equilibrio_vida" value="No">No<br>
+                <br>
+
+                <b>d. ¿Te sientes apoyado por tus compañeros y superiores en cuestiones emocionales?</b><br>
+                <input type="radio" name="apoyo_emocional" value="Sí">Sí<br>
+                <input type="radio" name="apoyo_emocional" value="No">No
+            </div>
+
+            <!-- Pregunta 6 -->
+            <div class="question">
+                <label for="relaciones_companeros">6. Relaciones con Compañeros:</label><br>
+                <br>
+                <b>a. ¿Cómo describirías tus relaciones con tus compañeros de trabajo?</b><br>
+                <input type="radio" name="descripcion_relaciones" value="Excelentes">Excelentes<br>
+                <input type="radio" name="descripcion_relaciones" value="Buenas">Buenas<br>
+                <input type="radio" name="descripcion_relaciones" value="Neutrales">Neutrales<br>
+                <input type="radio" name="descripcion_relaciones" value="Tensas">Tensas<br>
+                <input type="radio" name="descripcion_relaciones" value="Malas">Malas<br>
+                <br>
+
+                <b>b. ¿Te sientes parte de un equipo colaborativo?</b><br>
+                <input type="radio" name="parte_equipo" value="Sí">Sí<br>
+                <input type="radio" name="parte_equipo" value="No">No<br>
+                <br>
+
+                <b>c. ¿Con qué frecuencia socializas fuera del trabajo con tus colegas?</b><br>
+                <input type="radio" name="socializar_fuera_trabajo" value="Regularmente">Regularmente<br>
+                <input type="radio" name="socializar_fuera_trabajo" value="Ocasionalmente">Ocasionalmente<br>
+                <input type="radio" name="socializar_fuera_trabajo" value="Raramente">Raramente<br>
+                <input type="radio" name="socializar_fuera_trabajo" value="Nunca">Nunca
+            </div>
+
+            <!-- Pregunta 7 -->
+            <div class="question">
+                <label for="desarrollo_profesional">7. Desarrollo Profesional:</label><br>
+                <br>
+                <b>a. ¿Sientes que tienes oportunidades de crecimiento y desarrollo en tu puesto actual?</b><br>
+                <input type="radio" name="oportunidades_crecimiento" value="Sí">Sí<br>
+                <input type="radio" name="oportunidades_crecimiento" value="No">No<br>
+                <br>
+
+                <b>b. ¿Has participado en programas de capacitación o desarrollo profesional en el último año?</b><br>
+                <input type="radio" name="participacion_capacitacion" value="Sí">Sí<br>
+                <input type="radio" name="participacion_capacitacion" value="No">No<br>
+                <br>
+
+                <b>c. ¿Sientes que tus habilidades y conocimientos son valorados y utilizados en tu trabajo?</b><br>
+                <input type="radio" name="habilidades_valoradas" value="Sí">Sí<br>
+                <input type="radio" name="habilidades_valoradas" value="No">No
+            </div>
+
+            <!-- Pregunta 8 -->
+            <div class="question">
+                <label for="equilibrio_vida">8. Equilibrio entre Trabajo y Vida Personal:</label><br>
+                <br>
+                <b>a. ¿Sientes que tu trabajo afecta negativamente tu vida personal?</b><br>
+                <input type="radio" name="afectacion_vida_personal" value="Sí, de manera significativa">Sí, de manera significativa<br>
+                <input type="radio" name="afectacion_vida_personal" value="Sí, en cierta medida">Sí, en cierta medida<br>
+                <input type="radio" name="afectacion_vida_personal" value="No">No<br>
+                <br>
+
+                <b>b. ¿Tienes flexibilidad en tu horario de trabajo cuando es necesario?</b><br>
+                <input type="radio" name="flexibilidad_horario" value="Sí">Sí<br>
+                <input type="radio" name="flexibilidad_horario" value="No">No
+            </div>
+
+            <!-- Pregunta 9 -->
+            <div class="question">
+                <label for="comunicacion">9. Comunicación:</label><br>
+                <br>
+                <b>a. ¿Sientes que la comunicación dentro de la organización es efectiva?</b><br>
+                <input type="radio" name="comunicacion_efectiva" value="Sí, siempre">Sí, siempre<br>
+                <input type="radio" name="comunicacion_efectiva" value="A veces">A veces<br>
+                <input type="radio" name="comunicacion_efectiva" value="No">No<br>
+                <br>
+
+                <b>b. ¿Te sientes escuchado por tus superiores cuando planteas inquietudes o sugerencias?</b><br>
+                <input type="radio" name="escuchado_superiores" value="Sí">Sí<br>
+                <input type="radio" name="escuchado_superiores" value="A veces">A veces<br>
+                <input type="radio" name="escuchado_superiores" value="No">No
+            </div>
+
+
+            <br><br>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>
